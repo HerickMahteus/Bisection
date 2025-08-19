@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Bisection {
     static Scanner scanner = new Scanner(System.in);
 
     static double a, b, c;
