@@ -33,7 +33,7 @@ public class Bisection {
         System.out.println("f(" + ls + ") = " + f(ls));
 
         if (f(li) * f(ls) >= 0) {
-            System.out.println("\nErro: f(a) e f(b) têm o mesmo sinal. O método da bissecção não garante raiz.");
+            System.out.println("\nErro: f(a) e f(b) têm o mesmo sinal.");
             return;
         }
 
@@ -62,6 +62,7 @@ public class Bisection {
             erro = xb - xa;
             iter++;
         }
+
 
         double raiz = (xa + xb) / 2;
         System.out.println("\nAproximação da raiz: " + raiz);
