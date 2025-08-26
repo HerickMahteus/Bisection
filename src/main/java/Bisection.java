@@ -63,7 +63,6 @@ public class Bisection {
             iter++;
         }
 
-
         double raiz = (xa + xb) / 2;
         System.out.println("\nAproximação da raiz: " + raiz);
         System.out.println("Erro final: " + erro);

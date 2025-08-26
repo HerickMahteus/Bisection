@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+</head>
+<body>
+<h2>Resultado</h2>
+<p>Aproximação da raiz: <b th:text="${raiz}"></b></p>
+
+<h3>Iterações</h3>
+<ul>
+    <li th:each="i : ${iteracoes}" th:text="${i}"></li>
+</ul>
+
+<a href="/">Voltar</a>
+</body>
+</html>
