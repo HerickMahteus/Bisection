@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Bisection.iml" filepath="$PROJECT_DIR$/Bisection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bisection.iml" filepath="$PROJECT_DIR$/bisection.iml" />
     </modules>
   </component>
 </project>

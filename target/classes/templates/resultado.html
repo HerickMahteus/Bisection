@@ -3,16 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Resultado</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-top: 20px;
+        }
+        th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: right;
+        }
+        th {
+          background-color: #f2f2f2;
+        }
+        td:first-child, th:first-child {
+          text-align: center;
+        }
+    </style>
 </head>
 <body>
 <h2>Resultado</h2>
 <p>Aproximação da raiz: <b th:text="${raiz}"></b></p>
 
 <h3>Iterações</h3>
-<ul>
-    <li th:each="i : ${iteracoes}" th:text="${i}"></li>
-</ul>
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Xa</th>
+        <th>f(a)</th>
+        <th>Xb</th>
+        <th>f(b)</th>
+        <th>Xn</th>
+        <th>f(n)</th>
+        <th>Erro</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="it : ${iteracoes}">
+        <td th:text="${it.numero}"></td>
+        <td th:text="${it.xa}"></td>
+        <td th:text="${it.fa}"></td>
+        <td th:text="${it.xb}"></td>
+        <td th:text="${it.fb}"></td>
+        <td th:text="${it.xn}"></td>
+        <td th:text="${it.fn}"></td>
+        <td th:text="${it.erro}"></td>
+    </tr>
+    </tbody>
+</table>
 
-<a href="/">Voltar</a>
+<br><a href="/">Voltar</a>
 </body>
 </html>
