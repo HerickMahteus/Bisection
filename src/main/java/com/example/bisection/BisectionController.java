@@ -1,4 +1,4 @@
-package com.example.bisection.controller;
+package com.example.bisection;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,7 +12,7 @@ public class BisectionController {
 
     @GetMapping("/")
     public String index() {
-        return "index"; // abre o formulário
+        return "index";
     }
 
     @PostMapping("/calcular")
@@ -28,17 +28,15 @@ public class BisectionController {
         double xa = li, xb = ls;
         double erro = xb - xa;
         int iter = 1;
-        List<String> iteracoes = new ArrayList<>();
+        List<Iteracao> iteracoes = new ArrayList<>();
 
         while (erro > prec) {
             double xn = (xa + xb) / 2;
             double fa = f(a, b, c, exp, xa);
+            double fb = f(a, b, c, exp, xb);
             double fn = f(a, b, c, exp, xn);
 
-            iteracoes.add(iter + ") Xa=" + xa + " | f(a)=" + fa +
-                    " | Xb=" + xb + " | f(b)=" + f(a, b, c, exp, xb) +
-                    " | Xn=" + xn + " | f(n)=" + fn +
-                    " | Erro=" + erro);
+            iteracoes.add(new Iteracao(iter, xa, fa, xb, fb, xn, fn, erro));
 
             if (fa * fn < 0) xb = xn; else xa = xn;
 
