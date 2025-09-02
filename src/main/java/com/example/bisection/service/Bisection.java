@@ -1,3 +1,5 @@
+package com.example.bisection.service;
+
 import java.util.Scanner;
 
 public class Bisection {

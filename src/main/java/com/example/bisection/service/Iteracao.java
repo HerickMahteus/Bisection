@@ -1,4 +1,4 @@
-package com.example.bisection;
+package com.example.bisection.service;
 
 public class Iteracao {
     private int numero;

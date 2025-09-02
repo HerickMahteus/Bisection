@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Método da Eliminação de Gauss</title>
+</head>
+<body>
+<h2>Método da Eliminação de Gauss</h2>
+
+<form action="/gauss" method="post">
+  <label for="n">Dimensão da matriz (n):</label>
+  <input type="number" name="n" id="n" required><br><br>
+
+  <label for="matrix">Matriz A (linhas separadas por ponto e vírgula, valores por espaço):</label><br>
+  <textarea name="matrix" id="matrix" rows="5" cols="40" required></textarea><br><br>
+
+  <label for="vector">Vetor B (valores separados por espaço):</label><br>
+  <input type="text" name="vector" id="vector" required><br><br>
+
+  <button type="submit">Resolver</button>
+</form>
+
+<p>Exemplo de entrada:<br>
+  n = 3<br>
+  Matriz A = <br>
+  2 1 -1;<br>
+  -3 -1 2;<br>
+  -2 1 2<br>
+  Vetor B = 8 -11 -3</p>
+
+<a href="/">Voltar</a>
+</body>
+</html>

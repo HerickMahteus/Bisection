@@ -1,5 +1,6 @@
-package com.example.bisection;
+package com.example.bisection.controller;
 
+import com.example.bisection.service.Iteracao;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -10,9 +11,9 @@ import java.util.List;
 @Controller
 public class BisectionController {
 
-    @GetMapping("/")
+    @GetMapping("/bissecao")
     public String index() {
-        return "index";
+        return "bisection-form";
     }
 
     @PostMapping("/calcular")
@@ -46,7 +47,7 @@ public class BisectionController {
 
         model.addAttribute("raiz", (xa + xb) / 2);
         model.addAttribute("iteracoes", iteracoes);
-        return "resultado";
+        return "bisection-result";
     }
 
     private double f(double a, double b, double c, int exp, double x) {

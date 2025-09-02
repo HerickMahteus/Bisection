@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Método da Bissecção</title>
+</head>
+<body>
+    <h2>Entradas</h2>
+    <form action="/calcular" method="post">
+        a: <input type="number" step="any" name="a"><br><br>
+        b: <input type="number" step="any" name="b"><br><br>
+        c: <input type="number" step="any" name="c"><br><br>
+        Expoente: <input type="number" name="exp"><br><br>
+        Limite inferior: <input type="number" step="any" name="li"><br><br>
+        Limite superior: <input type="number" step="any" name="ls"><br><br>
+        Precisão (erro): <input type="number" step="any" name="prec"><br><br>
+        <button type="submit">Calcular</button>
+    </form>
+    <br><a href="/">Voltar</a>
+</body>
+</html>

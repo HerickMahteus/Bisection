@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultado - Eliminação de Gauss</title>
+</head>
+<body>
+    <h2>Resultado da Eliminação de Gauss</h2>
+
+    <table border="1">
+        <tr>
+            <th>Variável</th>
+            <th>Valor</th>
+        </tr>
+        <tr th:each="val, iter : ${solution}">
+            <td th:text="'x' + ${iter.index + 1}"></td>
+            <td th:text="${val}"></td>
+        </tr>
+    </table>
+
+    <br><a href="/gauss">Voltar</a>
+</body>
+</html>
